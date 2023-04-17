@@ -1,4 +1,17 @@
 /* Basic Style */
+* {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  margin: 0;
+  padding: 0;
+  border: unset;
+}
+
 body {
     background-color: #f8f8f8;
     color: #333;
