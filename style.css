@@ -1,4 +1,4 @@
-/* basic style */
+/* default styles change*/
 * {
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
@@ -12,80 +12,14 @@
   border: unset;
 }
 
-body {
+/* basic styles */
+.body {
+  margin: 8px;
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
 
-.aaa {
-  width: 500px;
-  margin: 0 auto;
-  display: block;
-  text-align: right;
-}
-
-.aaa img {
-  width: 100%;
-}
-
-.aaa .more_inf {
-  font-family: Fantasy, cursive;
-}
-
-@media (max-width: 768px) {
-
-  .aaa { text-align: center;
-  }
-
-}
-
-.centered-main-page-element {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
-}
-
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-
-.task-row-wrapper {
-  display: flex;
-}
-
-ul {
-  margin: 0;
-  padding: 0px;
-}
-
-li,
-h3 {
-  list-style: none;
-}
-
-input,
-button{
-  outline: none;
-}
-
-button {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
-
-button:hover {
-  color: #3a3a3a;
-}
-
-/* heading */
 h3,
 label[for="new-task"] {
   color: #333;
@@ -114,17 +48,20 @@ input[type="text"]:focus {
   color: #333;
 }
 
-/* new task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
 }
 
-input#new-task {
-  width: 318px;
+button:hover {
+  color: #3a3a3a;
 }
 
-/* task list */
 li {
   overflow: hidden;
   padding: 20px 0;
@@ -163,7 +100,57 @@ button.delete img:hover {
   transform: rotateZ(0);
 }
 
-/* completed */
+.task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+/* figure */
+.aaa {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+}
+
+.aaa img {
+  width: 100%;
+}
+
+.aaa .more_inf {
+  font-family: Fantasy, cursive;
+}
+
+@media (max-width: 768px) {
+
+  .aaa { text-align: center;
+  }
+
+}
+
+/* tasks-list block */
+.centered-main-page-element {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+/* add task */
+.task-row-wrapper {
+  display: flex;
+}
+
+label[for="new-task"] {
+  display: block;
+  margin: 0 0 20px;
+}
+
+input#new-task {
+  width: 318px;
+}
+
+/* completed tasks*/
 ul#completed-tasks label {
   text-decoration: line-through;
   color: #888;
