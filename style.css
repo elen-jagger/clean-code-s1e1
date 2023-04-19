@@ -30,47 +30,6 @@
   text-transform: uppercase;
 }
 
-.task-row__text-input {
-  width: 226px;
-  height: 21px;
-  margin: 0;
-  padding: 0 9px;
-  font-family: Lato, sans-serif;
-  font-size: 18px;
-  line-height: 18px;
-  color: #888;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-.task-row__text-input:focus {
-  color: #333;
-}
-
-.task {
-  display: inline-block;
-  box-sizing: border-box;
-  flex-grow: 1;
-  width: 56%;
-  padding-left: 10px;
-  font-size: 18px;
-}
-
-.task-row__btn {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
-
-.task-row__btn:hover {
-  color: #3a3a3a;
-}
-
 .task-row {
   overflow: hidden;
   padding: 20px 0;
@@ -84,6 +43,44 @@
   margin: 0 10px;
 }
 
+.task-row__label,
+.task-row__text-input {
+  display: inline-block;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.task-row__text-input {
+  width: 226px;
+  height: 21px;
+  margin: 0;
+  padding: 0 9px 0 10px;
+  line-height: 18px;
+  color: #888;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.task-row__text-input:focus {
+  color: #333;
+}
+
+.task-row__btn {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.task-row__btn:hover {
+  color: #3a3a3a;
+}
+
 .btn_delete__img {
   height: 2em;
   transform: rotateZ(45deg);
@@ -95,64 +92,61 @@
 }
 
 /* header */
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
-  text-align: right;
-}
-
-.aaa .header__img {
-  width: 100%;
-}
-
-.aaa .more_inf {
   font-family: Fantasy, cursive;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
 
-  .aaa { text-align: center;
+  .header { text-align: center;
   }
 
 }
 
+.header__img {
+  width: 100%;
+}
+
 /* tasks-list block */
-.centered-main-page-element {
+.tasks-list {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-/* add task */
-.task-row-wrapper {
-  display: flex;
-}
-
+/* add task section */
 .section__title_add {
   display: block;
-  margin: 0 0 20px;
+  margin: 16px 0 20px 0;
 }
 
-/* completed tasks*/
-#completed-tasks .task {
+.task-row_add {
+  display: flex;
+  padding: 0 0 10px 0;
+  border-bottom: none;
+}
+
+/* completed tasks section */
+#section_completed .task-row__label,
+#section_completed .task-row__text-input  {
   text-decoration: line-through;
   color: #888;
 }
 
-/* edit task */
-#incompleted-tasks .task-row__text-input,
-#completed-tasks .task-row__text-input {
+/* edit task section */
+#section_incompleted .task-row__text-input,
+#section_completed .task-row__text-input,
+#section_incompleted .task-row_edit-mode .task-row__label,
+#section_completed .task-row_edit-mode .task-row__label {
   display: none;
 }
 
-#incompleted-tasks .task-row_edit-mode .task-row__text-input,
-#completed-tasks  .task-row_edit-mode .task-row__text-input {
+#section_incompleted .task-row_edit-mode .task-row__text-input,
+#section_completed  .task-row_edit-mode .task-row__text-input {
   display: inline-block;
   width: 224px;
-}
-
-#incompleted-tasks .task-row_edit-mode .task-row__label,
-#completed-tasks .task-row_edit-mode .task-row__label {
-  display: none;
 }
