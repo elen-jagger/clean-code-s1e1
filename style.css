@@ -1,148 +1,152 @@
-/* Basic Style */
-body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-family: Lato, sans-serif;
-}
-.aaa {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-    text-align: right;
-}
-.aaa img {
-    width: 100%;
-}
-.aaa .more_inf {
-    font-family: fantasy, cursive;
+/* default styles change*/
+* {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  margin: 0;
+  padding: 0;
+  border: unset;
 }
 
-@media (max-width:768px) {
-.aaa { text-align: center;
-}
-}
-.centered-main-page-element {
-    display: block;
-    width: 500px;
-    margin: 0 auto 0;
-}
-.task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1
-}
-.task-row-wrapper {
-    display: flex;
-}
-ul {
-    margin:0;
-    padding: 0px;
-}
-li, h3 {
-    list-style:none;
-}
-input,button{
-    outline:none;
-}
-button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    font-family: Lato, sans-serif;
-    cursor: pointer;
-}
-button:hover {
-    color: #3a3A3a;
-}
-/* Heading */
-h3,
-label[for='new-task'] {
-    color: #333;
-    font-weight: 700;
-    font-size: 15px;
-    border-bottom: 2px solid #333;
-    padding: 30px 0 10px;
-    margin: 0;
-    text-transform: uppercase;
-}
-input[type="text"] {
-    margin: 0;
-    font-size: 18px;
-    line-height: 18px;
-    height: 21px;
-    padding: 0 9px;
-    border: 1px solid #dDd;
-    background: #FFF;
-    border-radius: 6px;
-    font-family: Lato, sans-serif;
-    color: #888;
-}
-input[type="text"]:focus {
-    color: #333;
+/* basic styles */
+.body {
+  margin: 8px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
 }
 
-/* New Task */
-label[for='new-task'] {
-    display: block;
-    margin: 0 0 20px;
-}
-input#new-task {
-    width: 318px;
-}
-
-/* Task list */
-li {
-    overflow: hidden;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-li > * {
-    vertical-align: middle;
+.section__title {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
-li > input[type="checkbox"] {
-    margin: 0 10px;
-}
-li > label {
-    padding-left: 10px;
-    box-sizing: border-box;
-    font-size: 18px;
-    width: 226px;
-}
-li >    input[type="text"] {
-    width: 226px
-}
-button.delete img {
-    height: 2em;
-    transform: rotateZ(45deg);
-    transition: transform 200ms ease-in;
-}
-button.delete img:hover {
-    transform: rotateZ(0);
+.task-row {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Completed */
-ul#completed-tasks label {
-    text-decoration: line-through
-    color: #888;
+.task-row__checkbox {
+  margin: 0 10px;
 }
 
-/* Edit Task */
-ul li input[type=text] {
-    display:none
+.task-row__label,
+.task-row__text-input {
+  display: inline-block;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding-left: 10px;
+  font-size: 18px;
 }
 
-ul li.editMode input[type=text] {
-    display:inline-block;
-    width:224px
+.task-row__text-input {
+  width: 226px;
+  height: 21px;
+  margin: 0;
+  padding: 0 9px 0 10px;
+  line-height: 18px;
+  color: #888;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
-ul li.editMode label {
-    display:none;
+.task-row__text-input:focus {
+  color: #333;
+}
+
+.task-row__btn {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.task-row__btn:hover {
+  color: #3a3a3a;
+}
+
+.btn_delete__img {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.btn_delete__img:hover {
+  transform: rotateZ(0);
+}
+
+/* header */
+.header {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  font-family: Fantasy, cursive;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+
+  .header { text-align: center;
+  }
+
+}
+
+.header__img {
+  width: 100%;
+}
+
+/* tasks-list block */
+.tasks-list {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+/* add task section */
+.section__title_add {
+  display: block;
+  margin: 16px 0 20px 0;
+}
+
+.task-row_add {
+  display: flex;
+  padding: 0 0 10px 0;
+  border-bottom: none;
+}
+
+/* completed tasks section */
+#section_completed .task-row__label,
+#section_completed .task-row__text-input  {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* edit task section */
+#section_incompleted .task-row__text-input,
+#section_completed .task-row__text-input,
+#section_incompleted .task-row_edit-mode .task-row__label,
+#section_completed .task-row_edit-mode .task-row__label {
+  display: none;
+}
+
+#section_incompleted .task-row_edit-mode .task-row__text-input,
+#section_completed  .task-row_edit-mode .task-row__text-input {
+  display: inline-block;
+  width: 224px;
 }
